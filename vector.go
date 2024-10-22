@@ -49,6 +49,11 @@ func (v Vector2) Normalise() Vector2 {
 	return Vector2{X: v.X / mag, Y: v.Y / mag}
 }
 
+// multiply by float
+func (v Vector2) Multiply(scalar float64) Vector2 {
+	return Vector2{X: v.X * scalar, Y: v.Y * scalar}
+}
+
 // String returns a string representation of the 2D vector
 func (v Vector2) String() string {
 	return fmt.Sprintf("(%f, %f)", v.X, v.Y)
@@ -98,6 +103,11 @@ func (v Vector3) Normalise() Vector3 {
 	return Vector3{X: v.X / mag, Y: v.Y / mag, Z: v.Z / mag}
 }
 
+// multiply by float
+func (v Vector3) Multiply(scalar float64) Vector3 {
+	return Vector3{X: v.X * scalar, Y: v.Y * scalar, Z: v.Z * scalar}
+}
+
 // String returns a string representation of the 3D vector
 func (v Vector3) String() string {
 	return fmt.Sprintf("(%f, %f, %f)", v.X, v.Y, v.Z)
@@ -145,6 +155,11 @@ func (v Vector4) Normalise() Vector4 {
 		return Vector4{0, 0, 0, 0}
 	}
 	return Vector4{X: v.X / mag, Y: v.Y / mag, Z: v.Z / mag, W: v.W / mag}
+}
+
+// multiply by float
+func (v Vector4) Multiply(scalar float64) Vector4 {
+	return Vector4{X: v.X * scalar, Y: v.Y * scalar, Z: v.Z * scalar, W: v.W * scalar}
 }
 
 // String returns a string representation of the 4D vector
